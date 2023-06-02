@@ -1,5 +1,7 @@
 # eql-dashboard
+
 Elizabeth Qiu
+
 _under construction :construction:_
 
 - [x] 5/31: proj selection, specs research
@@ -37,4 +39,3 @@ TBD
 ### What's next
 
 TBD
-# eql-dashboard
