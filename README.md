@@ -6,7 +6,8 @@ _under construction :construction:_
 
 - [x] 5/31: proj selection, specs research
 - [x] 6/1: proj setup, design setup, github setup, publish to address
-- [x] 6/4: do not work on multiple projects after midnight (!!) + philosophy book
+- [x] 6/2: :( 
+- [x] 6/5: do not work on multiple projects after midnight (!!) + philosophy book
 
 ## Table of contents
 - [Requirements](#requirements)
