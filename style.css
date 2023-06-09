@@ -1,27 +1,27 @@
 * {
-    margin: 10px;
-    padding: 10px;
-    box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: helvetica, arial, sans-serif;
-    margin: 2em;
-  }
-  
-  nav {
-    background-color: #8aa6d4;
-  }
-  
-  button {
-    font-family: sans-serif;
-    font-size: 22px;
-    border-radius: 4px;
-    border: 2px solid #e3ff00;
-    background-color: #8aa6d4;
-    color: #e3ff00;
-  }
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
 
-  .correct-ratio {
-    object-fit: cover
-  }
+nav {
+  background-color: #8aa6d4;
+}
+
+button {
+  font-family: sans-serif;
+  font-size: 22px;
+  border-radius: 4px;
+  border: 2px solid #e3ff00;
+  background-color: #8aa6d4;
+  color: #e3ff00;
+}
+
+.correct-ratio {
+  object-fit: cover
+}
