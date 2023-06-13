@@ -1,0 +1,11 @@
+h1,
+h2,
+h3 {
+    margin-top: 0; // browser default has margin at top and bottom already
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none; // for no underline
+}

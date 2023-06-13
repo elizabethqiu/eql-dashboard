@@ -6,12 +6,12 @@ _under construction :construction:_
 
 - [x] 5/31: proj selection, specs research
 - [x] 6/1: proj setup, design setup, github setup, publish to address
-- [x] 6/2: :( 
-- [x] 6/5: do not work on multiple projects after midnight (!!) + philosophy book
-- [x] 6/6: :0
-- [x] 6/7: study/aoc
-- [x] finish notes/research and start adding files
-- [ ]
+- [x] 6/2-6/4: :( 
+- [x] 6/5: do not work on multiple projects after midnight (!!) + philosophy
+- [x] 6/6: :(
+- [x] 6/7: other
+- [x] 6/11: finish notes/research and start adding files
+- [x] 6/13: globals/util scss
 
 ## Table of contents
 - [Requirements](#requirements)

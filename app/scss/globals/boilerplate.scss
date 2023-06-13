@@ -1,0 +1,14 @@
+html {
+    font-size: 100%; // helps with accessbility
+    box-sizing: border-box; // maintain set width, with or without padding
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; // inherit from html element
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-inter);
+}
