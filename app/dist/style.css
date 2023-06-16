@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    gap: 25rem;
+    flex-direction: column;
+  }
+
+  button {
+    /* font-family: sans-serif;
+    font-size: 22px;
+    border-radius: 4px;
+    border: 2px solid #e3ff00;
+    background-color: #8aa6d4;
+    color: #e3ff00; */
+    width: 200px;
+  }
