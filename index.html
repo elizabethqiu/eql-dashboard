@@ -14,30 +14,51 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./app/dist/style.css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script defer src="./app/dist/script.js"></script>
-
-  <!-- Styles -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
-  <!-- testing lines 34-38 - thanks MDN -->
-  <div class="container">
-    <textarea class="story"></textarea>
-    <button id="set-text" type="button">Set text content</button>
-    <button id="clear-text" type="button">Clear text content</button>
-  </div>
 
-  Social Media Dashboard
+  <!-- Try the feedback on submit too, like "passwords don't match" or "Please enter a valid email address" (i think this is default)
+  
+  Try: if user didn't complete a required input fields, don't let them proceed (HTML attribute disabled, CSS button) -->
+
+  <form>
+    <label>First Name
+      <input type="text"placeholder="Jennifer" alt="first name input field">
+    </label>
+    <label>Last name
+      <input type="text" placeholder="Doe" alt="last name input field">
+    </label>
+
+  </form>
+
+
+  <form action="" method="get" class="form-example">
+    <div class="form-example">
+      <label for="name">Enter your name: </label>
+      <input type="text" name="name" id="name" required>
+    </div>
+    <div class="form-example">
+      <label for="email">Enter your email: </label>
+      <input type="email" name="email" id="email" required>
+    </div>
+    <div class="form-example">
+      <input type="submit" value="Subscribe!">
+    </div>
+  </form>
+  
+  
+  <form>
+    <h1>What's your name?</h1>
+    <input class="name-input" placeholder="name" type="text">
+    <button>Submit Name</button>
+  </form>
+
+
+
+  <!-- Social Media Dashboard
   Total Followers: 23,004
 
   Dark Mode
@@ -97,7 +118,7 @@
 
   Total Views
   1407
-  12%
+  12% -->
 
   <div class="attribution">
     By <a href="#">@elizabethqiu</a>

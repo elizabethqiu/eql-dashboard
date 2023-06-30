@@ -1,15 +1,72 @@
-.container {
+/* .container {
     display: flex;
     gap: 25rem;
     flex-direction: column;
   }
 
   button {
-    /* font-family: sans-serif;
+    font-family: sans-serif;
     font-size: 22px;
     border-radius: 4px;
     border: 2px solid #e3ff00;
     background-color: #8aa6d4;
-    color: #e3ff00; */
+    color: #e3ff00;
     width: 200px;
-  }
+  } */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-family: Helvetica;
+  margin: 15px;
+}
+
+
+
+
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+
+
+form {
+  display: table;
+}
+
+label,
+input {
+  display: flex;
+}
+
+.name-input {
+  margin: 15px;
+  padding: 12px 18px;
+  font-size: 18px;
+}
+
+button {
+  margin: 15px;
+  padding: 12px 18px;
+  border: 1px solid #4A37E7;
+  background: #4A37E7;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 4px;
+}
