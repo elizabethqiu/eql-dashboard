@@ -3,13 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/up.svg">
-
+  <!-- tab icon and title -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/eql-logo.jpg">
   <title>Social Media | EQL Dashboard</title>
 
+  <!-- connections to css, font, scripts, etc -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -20,35 +22,29 @@
 
 <body>
 
+  <nav>
+    <h1>Orci eu lobortis</h1>
+  </nav>
+  
   <!-- Try the feedback on submit too, like "passwords don't match" or "Please enter a valid email address" (i think this is default)
   
   Try: if user didn't complete a required input fields, don't let them proceed (HTML attribute disabled, CSS button) -->
 
-  <form>
-    <label>First Name
-      <input type="text"placeholder="Jennifer" alt="first name input field">
-    </label>
-    <label>Last name
-      <input type="text" placeholder="Doe" alt="last name input field">
-    </label>
+  <form action="" method="get" class="form-row">
+    <p>All fields marked with <span class="required">*</span> are required.</p>
+    <div class="form-row">
+      <label for="name">First Name</label>
+      <input type="text" id="name" name="user_first_name" placeholder="Jennifer" alt="first name input field" required>
 
-  </form>
-
-
-  <form action="" method="get" class="form-example">
-    <div class="form-example">
-      <label for="name">Enter your name: </label>
-      <input type="text" name="name" id="name" required>
+      <label for="name">Last Name</label>
+      <input type="text" id="name" name="user_last_name" placeholder="Doe" alt="last name input field" required>
     </div>
-    <div class="form-example">
-      <label for="email">Enter your email: </label>
-      <input type="email" name="email" id="email" required>
+    <div class="form-row">
+      <label for="name">Preferred First Name</label>
+      <input type="text" id="name" name="user_preferred_first_name" placeholder="Jen" alt="preferred first name input field">
     </div>
-    <div class="form-example">
-      <input type="submit" value="Subscribe!">
-    </div>
-  </form>
   
+  </form>
   
   <form>
     <h1>What's your name?</h1>
@@ -56,7 +52,21 @@
     <button>Submit Name</button>
   </form>
 
-
+  <main>
+    <article class="first-content">
+      <h2>Non blandit massa</h2>
+      <p>Aliquam faucibus purus in massa tempor nec feugiat nisl pretium. In est ante in nibh mauris cursus mattis molestie. Habitasse platea dictumst quisque sagittis purus sit. Non enim praesent elementum facilisis leo vel fringilla est ullamcorper. Egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam.</p>
+    </article>
+    <article class="main-content">
+      <h2>Lorem ipsum</h2>
+      <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo quis imperdiet massa tincidunt nunc. Id velit ut tortor pretium viverra suspendisse potenti nullam. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Porttitor eget dolor morbi non. Condimentum lacinia quis vel eros donec. Ipsum consequat nisl vel pretium lectus quam id leo in. Facilisi morbi tempus iaculis urna id volutpat. Elementum sagittis vitae et leo.</p>
+      <p>Amet luctus venenatis lectus magna fringilla urna. Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Purus faucibus ornare suspendisse sed nisi. Eget egestas purus viverra accumsan in nisl.</p>
+    </article>
+    <article class="end-content">
+      <h2>Purus viverra</h2>
+      <p>Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Mauris in aliquam sem fringilla. Ut placerat orci nulla pellentesque dignissim. Sed enim ut sem viverra aliquet eget sit amet tellus. Etiam erat velit scelerisque in dictum non consectetur a.</p>
+    </article>
+  </main>
 
   <!-- Social Media Dashboard
   Total Followers: 23,004

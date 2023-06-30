@@ -1,0 +1,218 @@
+<!-- Hidden Fields -->
+<input type="hidden" id="free_form_item_name" name="free_form_item[name]" data-value-template="${0X0_phone_type} to ${070_destination} on ${020_departure_date}">
+<input type="hidden" id="description" name="free_form_item[description]" data-value-template="${160_comments}">    
+<input type="hidden" id="source_part_num" name="free_form_item[source_part_num]" value="TRANSPO">
+<input type="hidden" id="uom" name="free_form_item[uom_id]" value="12">
+<input type="hidden" id="currency" name="free_form_item[currency_id]" value="1">
+
+<!-- Type -->
+<div class="form-group">
+  <label>Phone Number</label>
+  <select id="phone-type" class="form-control input-small" data-mapping="0X0_phone_type">
+    <option value="Bus" data-hourly="20" data-mileage="1" data-base="10">Bus</option>
+    <option value="Car" data-hourly="30" data-mileage="2" data-base="15">Car</option>
+    <option value="Car w/ Driver" data-hourly="35" data-mileage="3" data-base="15">Car with Driver</option>
+    <option value="SUV" data-hourly="40" data-mileage="4" data-base="20">SUV</option>
+    <option value="SUV w/ Driver"data-hourly="45" data-mileage="5" data-base="20">SUV with Driver</option>
+  </select>
+</div>
+
+<!-- Supplier -->
+<div class="form-group">
+  <label>Supplier<abbr class="required">*</abbr></label>
+  <div data-widget="supplier-browser"></div>
+</div>
+
+<!-- Departure Date/Time -->
+<div class="row">
+  <div class="pull-left form-group" style='width=15%; margin-right: 10px'>
+      <label>Departure Date<abbr class="required">*</abbr></label>
+      <input type="text" id="departure_date" name="date" class="required form-control date-picker input-small" data-mapping="020_departure_date">
+  </div>
+  <div class="pull-left form-group" style='margin-right: 10px'>
+    <label>Departure Time<abbr class="required">*</abbr></label>
+    <input type="time" id="departure_time" class="form-control required" data-mapping="030_departure_time">
+  </div>
+</div>
+
+<!-- Return Date/Time -->
+<div class="row">
+  <div class="pull-left form-group" style='width=15%; margin-right: 10px'>
+      <label>Return Date</label>
+      <input type="text" id="return_date" name="date" class="form-control date-picker input-small" data-mapping="040_return_date">
+  </div>
+  <div class="pull-left form-group" style='margin-right: 10px'>
+    <label>Return Time</label>
+    <input type="time" id="return_time" class="form-control" data-mapping="050_return_time">
+  </div>
+</div>
+
+<!-- Location --> 
+<div class="row">
+  <div class="pull-left form-group" style='width=15%; margin-right: 10px'>
+    <label>Origin<abbr class="required">*</abbr></label>
+    <input type="text" id="origin" class="form-control input-normal required" data-mapping="060_origin">
+  </div>
+  <div class="pull-left form-group" style='margin-right: 10px'>
+    <label>Destination<abbr class="required">*</abbr></label>
+    <input type="text" id="destination" class="form-control input-normal required" data-mapping="070_destination">
+  </div>
+</div>
+
+<!-- Base Cost -->
+<div class="row">
+  <div class="form-group">
+    <label>Base Cost</label>
+    <div id="bcost"></div>
+  </div>
+  <div class="form-group">
+    <input type="hidden" id="base-cost" class="form-control  integer input-small" value=0 data-mapping="080_base_cost">
+  </div>
+</div>
+
+<!-- Mileage -->
+<div class="row">
+  <div class="pull-left form-group" style='width=15%; margin-right: 20px'>
+    <label>Mileage<abbr class="required">*</abbr></label>
+    <input type="text" id="mileage" class="form-control required input-small integer" value=0 data-mapping="090_mileage">
+  </div>
+  <div class="form-group pull-left" style="margin-right: 45px">
+    <label>Mileage Rate</label>
+    <div id="mrate" style="position:relative; bottom:-5px;"></div>
+  </div>
+    <div class="form-group pull-left" style="margin-right: 10px">
+  	<label>Mileage Cost</label>
+    <div id="mcost" style="position:relative; bottom:-5px;"></div>
+  </div>
+  <div class="pull-left form-group" style='margin-right: 10px'>
+    <input type="hidden" id="mileage-rate" class="form-control integer input-small" data-mapping="100_mileage_rate">
+  </div>
+  <div class="form-group pull-left" style="margin-right: 10px">
+  	<input type="hidden" id="mileage-cost" class="form-control numeric-input input-small" data-mapping="110_mileage_cost">
+  </div>
+</div>
+
+<!-- Hours -->
+<div class="row">
+  <div class="pull-left form-group" style='width=15%; margin-right: 20px'>
+    <label>Hours<abbr class="required">*</abbr></label>
+    <input type="text" id="hours" class="form-control required input-small integer" value=0 data-mapping="120_hours">
+  </div>
+  <div class="form-group pull-left" style="margin-right: 53px">
+  <label for="hourly-rate">Hourly Rate</label>
+    <div id="hrate" style="position:relative; bottom:-5px;"></div>
+  </div>
+    <div class="form-group pull-left" style="margin-right: 10px">
+  <label for="hourly-cost">Hourly Cost</label>
+    <div id="hcost" style="position:relative; bottom:-5px;"></div>
+  </div>
+  <div class="pull-left form-group" style='margin-right: 10px'>
+    <input type="hidden" id="hourly-rate" class="form-control integer input-small" data-mapping="130_hourly_rate">
+  </div>
+  <div class="form-group pull-left" style="margin-right: 10px">
+  <input type="hidden" id="hourly-cost" class="form-control numeric-input input-small" data-mapping="140_hourly_cost">
+  </div>
+</div>
+
+<!-- Quantity and UOM -->
+<div class="row">
+    <div class="pull-left form-group" style='width=15%; margin-right: 20px'>
+      <label>Quantity<abbr class="required">*</abbr></label>
+        <input type="text" id="qty" name="free_form_item[quantity]" class="quantity-input integer required form-control input-small" value="1">
+    </div>
+    <div class="pull-left form-group" style='margin-right: 10px'>
+      <label>Total Cost</label>
+      <div id="tcost" style="position:relative; bottom:-5px;"></div>
+      <input type="hidden" id="total" class="numeric-input" data-mapping="150_total">
+      <input type="hidden" id="unit_price" name="free_form_item[unit_price]" class="numeric-input">
+    </div>
+
+    <div class="form-group pull-left currency" style='margin-left: 10px'>
+        <label>Currency</label>
+        <div data-widget="currency-dropdown"></div>
+  </div>
+</div>
+
+  
+<!-- Comments -->
+<div class="form-group">
+  <label>Comments</label>
+  <textarea id="comments" class="form-control input-normal" rows="2" data-mapping="160_comments"></textarea>
+</div>
+
+<div>&nbsp;</div>
+<div data-widget="add-to-cart"></div>
+
+<script>
+  Page.updateUnitPrice = function(){
+    var unitPrice = parseFloat($('#base-cost').val()) + 
+      parseFloat($("#hourly-cost").val()) + 
+      parseFloat($("#mileage-cost").val());
+
+    $('#unit_price').val(unitPrice).change();
+  }
+
+  // Change hourly and mileage rate based on transportation type selection
+  // Also set hourly/mileage/base costs
+  Page.onTransTypeChange = function(){
+    var selectedOption = $('#trans-type').find(':selected');
+
+    $('#hourly-rate').val(selectedOption.data('hourly')).change();
+    $('#mileage-rate').val(selectedOption.data('mileage')).change();
+    $('#base-cost').val(selectedOption.data('base')).change();
+    $('#part-num').val(selectedOption.data('part')).change();
+    $('#hrate').text("$"+ selectedOption.data('hourly').toFixed(2) + "/hr").change();
+    $('#mrate').text("$"+ selectedOption.data('mileage').toFixed(2) + "/mi").change();
+    $('#bcost').text("$"+ selectedOption.data('base').toFixed(2)).change();
+    
+    // recalculate and set hour/mile cost
+    $('#hcost').text("$"+ $("#hourly-cost").val()).change();
+    $('#mcost').text("$"+ $("#mileage-cost").val()).change();
+
+    // Note: setting input value via .val method does not trigger change event
+    // Need to call manually to trigger total calculation
+
+    $('#mileage').change();
+    $('#hours').change();
+  }
+
+  Page.onHoursChange = function(){
+    if ($("#hours").val() == "" || $("#hours").val() == null || $("#hours").val() < 0) {
+       $("#hours").val(0).change();
+    } else {
+       $('#hcost').text('$' + $("#hourly-cost").val());
+    }
+
+    Page.updateUnitPrice();
+  }
+
+  Page.onMileageChange = function(){
+    if ($("#mileage").val() == "" || $("#mileage").val() == null || $("#mileage").val() < 0) {
+      $("#mileage").val(0).change(); 
+    } 
+      $('#mcost').text('$' + $("#mileage-cost").val());
+
+    Page.updateUnitPrice();
+  }
+
+  Page.onQuantityChange = function(){
+    if ($("#qty").val() == "" || $("#qty").val() == null || $("#qty").val() <= 0) {
+       $("#qty").val(1).change();  
+    }
+  }
+
+  $(document).ready(function(){
+    // Calculate hourly cost and mileage cost
+    setupTotalCalculation('hours', 'hourly-rate', null, 'hourly-cost');
+    setupTotalCalculation('mileage', 'mileage-rate', null, 'mileage-cost');
+    setupTotalCalculation('unit_price', 'qty', null, 'total', 'tcost');
+
+    $('#trans-type').change(Page.onTransTypeChange);
+    $('#hours').change(Page.onHoursChange);
+    $('#mileage').change(Page.onMileageChange);
+    $('#qty').change(Page.onQuantityChange);
+
+    // to trigger when page first loads
+    Page.onTransTypeChange();
+  })
+</script>

@@ -14,9 +14,77 @@
     width: 200px;
   } */
 
+  /* BEGIN 🤸🏻‍♀️😃😃😃😃😃😃 responsive design */
+@media screen and (max-width: 900px) {
+  h1 {
+    background: magenta;
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  padding: 1%;
+}
+
+nav {
+  margin-bottom: 1%;
+  padding: 1%;
+  border: 1px solid #FD4E4E;
+  background: #FEBDBD;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+article {
+  padding: 1%;
+  width: 33%;
+}
+
+.first-content {
+  margin-right: 1%;
+  border: 1px solid #FFA23E;
+  background: #FFDCB7;
+}
+
+.main-content {
+  margin-right: 1%;
+  border: 1px solid #495397;
+  background: #BBBFD8;
+}
+
+.end-content {
+  border: 1px solid #AFFD4E;
+  background: #E1FEBD;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
+
+
+
+/* END 🤸🏻‍♀️😃😃😃😃😃😃 responsive design */
+
+/* body {
   font-family: helvetica, arial, sans-serif;
   margin: 2em;
+}
+
+p {
+
+}
+
+span.required {
+  color: red !important;
 }
 
 h1 {
@@ -25,13 +93,11 @@ h1 {
 }
 
 
-
-
-form.form-example {
+.form-row {
   display: table;
 }
 
-div.form-example {
+.form-example {
   display: table-row;
 }
 
@@ -69,4 +135,4 @@ button {
   color: #fff;
   font-size: 18px;
   border-radius: 4px;
-}
+} */
